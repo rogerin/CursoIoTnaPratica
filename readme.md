@@ -25,18 +25,18 @@ Aqui está uma foto do kit que cada participante levou para casa após o curso. 
 
 No kit que vc leva para casa:
 
-⁠  1. ESP32: 1 unidade
- 2.⁠ ⁠Sensor de temperatura e umidade DHT11: 1 unidade
- 3.⁠ ⁠Protoboard 400 furos: 1 unidade
- 4.⁠ ⁠LEDs de 3 cores diferentes: 5 unidades (cores aleatórias)
- 5.⁠ ⁠Resistor 220 ohm: 10 unidades
- 6.⁠ ⁠Resistor 1K ohm: 10 unidades
- 7.⁠ ⁠Resistor 10K ohm: 10 unidades
- 8.⁠ ⁠Resistor 100K ohm: 10 unidades
- 9.⁠ ⁠Fotoresistor 5516: 2 unidades
-10.⁠ ⁠Botões com tampas coloridas: 6 unidades (cores misturadas)
-11. Conector de bateria 9V: 1 unidade
-12. Jumpers macho para macho de 20 cm: 20 unidades (20Pins)
+⁠1. ESP32: 1 unidade  
+2.⁠ ⁠Sensor de temperatura e umidade DHT11: 1 unidade  
+3.⁠ ⁠Protoboard 400 furos: 1 unidade  
+4.⁠ ⁠LEDs de 3 cores diferentes: 5 unidades (cores aleatórias)  
+5.⁠ ⁠Resistor 220 ohm: 10 unidades  
+6.⁠ ⁠Resistor 1K ohm: 10 unidades  
+7.⁠ ⁠Resistor 10K ohm: 10 unidades  
+8.⁠ ⁠Resistor 100K ohm: 10 unidades  
+9.⁠ ⁠Fotoresistor 5516: 2 unidades  
+10.⁠ ⁠Botões com tampas coloridas: 6 unidades (cores misturadas)  
+11. Conector de bateria 9V: 1 unidade  
+12. Jumpers macho para macho de 20 cm: 20 unidades (20Pins)  
 
 ![Kit do IoT na pratica](./assets/imgs/IMG_0763.JPG "Veja o nosso logo!")
 ![Galera no IoT na pratica](./assets/imgs/WhatsApp%20Image%202024-04-20%20at%2023.06.18.jpeg "Veja o nosso logo!")
