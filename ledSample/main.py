@@ -62,4 +62,4 @@ def conectar_wifi(ssid, senha):
     print('Conectado com sucesso')
 
 
-conectar_wifi('Cariri', '0987654321')
+conectar_wifi('---', '----')

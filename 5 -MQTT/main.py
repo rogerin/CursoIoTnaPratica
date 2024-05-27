@@ -4,24 +4,36 @@ import ujson
 import machine
 import network
 from umqtt.simple import MQTTClient
-import utime
 
-import urandom
+import dht 
+
+
+
+import random
+
+
+
+sensor = dht.DHT22(machine.Pin(14))
+
+def gerar_float_aleatorio(minimo, maximo):
+    return random.uniform(minimo, maximo)
+
+# Exemplo de uso
 
 # Digite seu SSID wifi e senha abaixo.
-wifi_ssid = "Cariri"
-wifi_password = "0987654321"
+wifi_ssid = "--"
+wifi_password = "--"
 
 # Insira seu endpoint do AWS IoT. Você pode encontrá-lo na página Configurações do
 # seu console do AWS IoT Core.
 # https://docs.aws.amazon.com/iot/latest/developerguide/iot-connect-devices.html
-aws_endpoint = b'a22wgjycrazooz-ats.iot.us-east-1.amazonaws.com'
-
+aws_endpoint = b'----.iot.us-east-1.amazonaws.com'
+                 
 # nomes que vamos definir para o nosso dispositivo e cliente.
 thing_name = "ccThing"
 client_id = "ccThing01"
-private_key = "cert/ClimaControl.private.key"
-private_cert = "cert/ClimaControl.cert.pem"
+private_key = "cert/--.private.key"
+private_cert = "cert/--.cert.pem"
 
 # ler a chave privada e o certificado do arquivo para autenticação na AWS IoT.
 with open(private_key, 'r') as f:
@@ -29,7 +41,7 @@ with open(private_key, 'r') as f:
 with open(private_cert, 'r') as f:
     cert = f.read()
 
-topic_pub = "climacontrol/device"
+topic_pub = "sensor/climao"
 # topic_sub = "topic/sub"
 
 ssl_params = {"key":key, "cert":cert, "server_side":False}
@@ -93,12 +105,16 @@ while True:
     except:
         print("Unable to check for messages.")
 
+    sensor.measure()
+    temp = sensor.temperature()
+    hum = sensor.humidity()
+    
+    numero_aleatorio1 = gerar_float_aleatorio(1.1, 50.5)
+    numero_aleatorio2 = gerar_float_aleatorio(1.1, 30.5)
+
     mesg = ujson.dumps({
-        "datachave": "1",
-        "temperatura": urandom.randint(0, 100),
-        "umidade": urandom.randint(0, 100),
-        "time": utime.time()
-        
+        "temperatura": temp,
+        "umidade": hum,
     })
 
     # Using the message above, the device shadow is updated.
